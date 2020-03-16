@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Seat Booking</title>
+  <link rel="stylesheet" href="../build/tailwind.css">
+  <link rel="stylesheet" href="../src/style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="../favicon_io/site.webmanifest">
+</head>
+
+<body>
+  <section class=" flex flex-col m-0  w-screen  bg-gray-800 h-screen text-gray-100 homescreen">
+    <nav class="flex-none">
+      <ul class="flex justify-between text-xl pt-8 px-8 md:px-12 lg:px-24 ">
+        <li>
+          <a href="../index.html" class="text-2xl">Ope<span class="text-purple-400">Idris</span></a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">Made with 💚
+            by OpeIdris</a>
+        </li>
+      </ul>
+    </nav>
+    <main id="movie-seat-booking" class=" flex-grow flex flex-col items-center justify-center">
+      <div class="movie-container mb-6">
+        <label> Pick a movie: </label>
+        <select id="movie" class="text-gray-800 text-xs ml-2 appearance-none py-1 px-2">
+          <option value="10">Avengers: Endgame ($10)</option>
+          <option value="12">Joker ($10)</option>
+          <option value="8">Toy Story 4 ($8)</option>
+          <option value="9">The Lion King ($9)</option>
+        </select>
+      </div>
+
+      <ul class="showcase bg-gray-900 py-1 px-3 flex justify-between rounded-sm">
+        <li class="flex items-center justify-center mx-3">
+          <div class="seat"></div>
+            <small>N/A</small>
+        </li>
+        <li class="flex items-center justify-center mx-3">
+          <div class="seat selected"></div>
+            <small>Selected</small>
+        </li>
+        <li class="flex items-center justify-center mx-3">
+          <div class="seat occupied"></div>
+            <small>Occupied</small>
+        </li>
+      </ul>
+      
+      <div class="cont perspective-1000 mb-6">
+        <div class="screen bg-gray-100 w-full h-16 mt-6 my-4 shadow-screen -rotateX-45"></div>
+
+        <div class="row flex">
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+        </div>
+        <div class="row flex">
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat occupied"></div>
+          <div class="seat occupied"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+        </div>
+        <div class="row flex">
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat occupied"></div>
+          <div class="seat occupied"></div>
+        </div>
+        <div class="row flex">
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat occupied"></div>
+          <div class="seat occupied"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+        </div>
+        <div class="row flex">
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat occupied"></div>
+          <div class="seat occupied"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+        </div>
+        <div class="row flex">
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat occupied"></div>
+          <div class="seat occupied"></div>
+          <div class="seat occupied"></div>
+          <div class="seat"></div>
+        </div>
+      </div>
+      
+      <p class="text"> You have selected <span id="count" class="text-blue-300">0</span> seats for a price of <span class="text-blue-300" id="total">$0</span></p>
+    </main>
+    
+  </section>
+
+
+
+  <script src="./src/movie-seat-booking.js"></script>
+  <script src="../src/script.js"></script>
+</body>
+
+</html>

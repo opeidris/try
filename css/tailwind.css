@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+	font-family: Lato;
+	src: url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300&display=swap');
+}
+
+/* Utilities */
+.-rotateX-45 {
+	transform: rotateX(-45deg);
+}
+
+.perspective-1000 {
+	perspective: 1000px;
+}
+/* Form control */
+
 .form-control {
 	@apply mb-5 pb-1 relative;
 }
@@ -10,22 +25,47 @@
 	@apply text-sm text-gray-800 mb-2;
 }
 
-.input {
+.form-control .input {
 	@apply border-2 border-purple-700 block w-full rounded-sm p-1;
 }
 
-.small {
+.form-control .small {
 	@apply text-red-600 .absolute .left-0 .bottom-0 .invisible .mb-0 .pb-0;
 }
 
-/* .form-control.success input {
-	@apply .border-2 .border-green-400;
+/* movie-seat-booker */
+
+#movie-seat-booking {
+	font-family: Lato;
+	font-weight: 300;
 }
 
-.form-control.error input {
-	@apply border-2 border-red-600;
+.seat {
+	@apply bg-purple-800 h-2 w-3 m-1 rounded-t-md;
 }
 
-.form-control.error small {
-	@apply .visible;
-} */
+.seat.selected {
+	@apply .bg-blue-300;
+}
+
+.seat.occupied {
+	@apply .bg-gray-100;
+}
+
+.seat:nth-of-type(2) {
+	@apply mr-4;
+}
+
+.seat:nth-last-of-type(2) {
+	@apply ml-4;
+}
+
+.seat:not(.occupied):hover {
+	cursor: pointer;
+	transform: scale(1.2);
+}
+
+.showcase .seat:not(.occupied):hover {
+	cursor: default;
+	transform: scale(1);
+}
