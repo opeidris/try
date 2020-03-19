@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Player</title>
+  <link rel="stylesheet" href="../build/tailwind.css">
+  <link rel="stylesheet" href="../src/style.css">
+  <link rel="stylesheet" href="./src/css/video-player-progress.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="../favicon_io/site.webmanifest">
+</head>
+
+<body>
+  <section class=" flex flex-col m-0  w-screen  bg-gray-800 h-screen text-gray-100 homescreen">
+    <nav class="flex-none">
+      <ul class="flex justify-between text-xl pt-8 px-8 md:px-12 lg:px-24 ">
+        <li>
+          <a href="../index.html" class="text-2xl">Ope<span class="text-purple-400">Idris</span></a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">Made with 💚
+            by OpeIdris</a>
+        </li>
+      </ul>
+    </nav>
+    <main class="flex-grow flex justify-center items-center flex-col">
+        <h1 class=text-white>Custom Video Player</h1>
+        <video src="./src/Rick Astley - Never Gonna Give You Up (Video).mp4" id="video" class="screen cursor-pointer w-10/12 sm:w-3/4 md:w-1/2 rounded-t-md "
+          poster="../src/poster.jpg"></video>
+        <div class="controls bg-gray-900 w-10/12 sm:w-3/4 md:w-1/2 text-white rounded-b-md flex justify-center items-center p-3">
+          <button class=" focus:outline-none pl-2 pr-1 outline-none" id="play">
+            <i class="text-green-400 fa fa-play fa-2x"></i>
+          </button>
+          <button class=" focus:outline-none pl-1 pr-2" id="stop">
+            <i class=" text-red-400 fa fa-stop fa-2x"></i>
+          </button>
+          <input type="range" id="progress" class="progress" min="0" max="100" step="0.1" value="0">
+          <span class="timestamp px-2 font-bold" id="timestamp">00:00</span>
+        </div>
+
+    </main>
+  </section>
+  <script src="./src/video-player.js"></script>
+  <script src="../src/script.js"></script>
+</body>
+    
+</html>
